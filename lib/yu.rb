@@ -298,7 +298,7 @@ module Yu
 
     def execute_command(command)
       info "Executing: #{command}" if verbose_mode?
-      exec(command)
+      %x(#{command})
     end
 
     def info(message)
